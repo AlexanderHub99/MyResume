@@ -91,10 +91,8 @@ body {
 
 /*Imeg*/
 .box_img_container_top {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    float: left;
+    margin: 18px;
 }
 
 .box_img {
@@ -193,4 +191,16 @@ body {
 .box_img:hover .box_img_text p {
     transform: scale(1);
     opacity: 1;
+}
+
+
+.My_Resume {
+    float: left;
+    margin: 7px;
+}
+
+.My_Resume_text h1 {
+    
+	
+	
 }
