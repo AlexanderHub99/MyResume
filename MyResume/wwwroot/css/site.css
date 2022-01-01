@@ -38,13 +38,17 @@ body {
     padding: 0;
 }
 
-.container {
+.wrapper {
     width: 100%;
     max-width: 1200px;
-    height: 800px;
     margin: 0 auto;
-    background: rgb(128, 128, 128, 0.2)
+    display: flex;
+    background: rgb(128, 128, 128, 0.2);
+    flex-direction: column;
+    align-items: center;
 }
+
+
 
 /*.particles-js {
     width: 100%;
@@ -59,7 +63,6 @@ body {
     margin: 0 auto;
     background: #afc39d;
     background-size: 100%;
-    height: 800px;
     position: relative;
 }
 /*Контейнер , My projects */
@@ -200,7 +203,16 @@ body {
 }
 
 .My_Resume_text h1 {
-    
-	
-	
+}
+
+.author__image {
+   width: 100%
+}
+
+@media (max-width: 450px) {
+    .wrapper p{
+    margin-top: 9px;
+    margin-bottom: 1rem;
+    font-size: 38px;
+    }
 }
