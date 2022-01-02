@@ -8,59 +8,102 @@
     <div class="container_My_resume ">
         <div class="wrapper">
             <div>
-            <div class="box_img_container_top ">
-                <div class="box_img">
-                    <img class="author__image" src="~/img/631978956.jpeg" alt="Telegram"></img>
-                    <div class="box_img_container">
-                        <div class="box_img_text">
-                            <h1>My Telegram</h1>
-                            <p>IscanderDanielovich</p>
+                <div class="box_img_container_top ">
+                    <div class="box_img">
+                        <img class="author__image" src="~/img/631978956.jpeg" alt="Telegram"></img>
+                        <div class="box_img_container">
+                            <div class="box_img_text">
+                                <h1>My Telegram</h1>
+                                <p>IscanderDanielovich</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div>
+                    <h1>Обо мне:</h1>
+                    <p class="text_td">Меня зовут Середин Александр Даниилович. Я работаю программистом с Март 2021 по настоящее время.</p>
+                    <p class="text_td">
+                        В данный момент работаю Backend-разработчиком в отделе Аналитики в компании <a href="https://fullhpltd.com/">"ООО Фаренгейт Лаб"</a>
+                        Ростов-на-Дону. На работе занимаюсь в основном, написанием скриптов для аналитика используя Google Аналитики, Firebase Аналитики,
+                        FaceBook Аналитики. Интерграцией все возможных SDK c последующей настойкой.
+                    </p>
+
+                </div>
             </div>
-            <div>
-                <h1>Обомне:</h1>
-                <p>Меня зовут Середин Александр Даниилович. Я работаю програмистом с Март 2021 по настоящее время.
-                <p>
-                    В данный момерт работаю Backend-разработчиком в отделе Аналитики в компании <br/><a href="https://fullhpltd.com/">"ООО Фаренгейт Лаб"</a>
-                    Ростов-на-Дону.На работе занимаюсь в основном,написанием скрипнов для аналитике используя Google Аналитики, Firebase Аналитики,
-                    FaceBook Аналитики. Интерграцией все возможных SDK c последующей настойкой.
-                </p>
-            </div>
-           </div>
             <div class="My_Resume My_Resume_text">
                 <h1>What I know and can do:</h1>
                 <table class="table">
                     <tbody>
                         <tr class="table-active">
-                            <td>Gloria</td>
-                            <td>Reeves</td>
-                            <td>67439</td>
-                            <td>10/18/1985</td>
+                            <td class="text_td">IDE:</td>
+                            <td>Visual Studio 2022</td>
+                            <td>Visual Studio 2019</td>
+                            <td>Visual Studio Code</td>
+                            <td>XCode</td>
+                            <td>Unity</td>
                         </tr>
                         <tr>
-                            <td>Graham</td>
-                            <td>Bonner</td>
-                            <td>90727</td>
-                            <td>12/07/1983</td>
+                            <td>Programming languages:</td>
+                            <td>С#</td>
+                            <td>JavaScript</td>
+                            <td>CSS</td>
+                            <td>HTML5</td>
                         </tr>
                         <tr>
-                            <td>Warren</td>
-                            <td>Wheeler</td>
-                            <td>99134</td>
-                            <td>11/11/1984</td>
+                            <td>Database:</td>
+                            <td>MySQL</td>
+                            <td>Realization:</td>
+                            <td>Entity Framework</td>
                         </tr>
                         <tr>
-                            <td>Zena</td>
-                            <td>Hale</td>
-                            <td>19803</td>
-                            <td>06/17/1987</td>
+                            <td>Design patterns:</td>
+                            <td>MVS</td>
+                            <td>Builder</td>
+                            <td>Factories</td>
+                            <td>Prototype</td>
+                            <td>Singleton</td>
+                            <td>Adapter</td>
+                            <td>etc.</td>
                         </tr>
-
                     </tbody>
                 </table>
             </div>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">My Projects</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Todo List<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="nav-item dropdown" >
+                                <button class="mainmenubtn">Design patterns:</button>
+                                <div class="dropdown-child">
+                                    <a href="#">Builder</a>
+                                    <a href="#">Factories</a>
+                                    <a href="#">Prototype</a>
+                                    <a href="#">Singleton</a>
+                                    <a href="#">Adapter</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
         </div>
     </div>
     <div class="container_My_projects ">
@@ -77,9 +120,11 @@
     </div>
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/table.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/css/drop-down_Menu.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="~/lib/bootstrap/dist/js/bu.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+
 </footer>
 </html>

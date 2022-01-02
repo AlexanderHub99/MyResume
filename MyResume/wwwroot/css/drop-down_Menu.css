@@ -1,0 +1,39 @@
+﻿.mainmenubtn {
+    background-color: #343a40 !important;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin-top: auto;
+}
+
+    .mainmenubtn:hover {
+        background-color: red;
+    }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-child {
+    display: none;
+    background-color: #343a40 !important;
+    min-width: auto;
+    position: absolute;
+    z-index: 1000;
+}
+
+
+
+    .dropdown-child a {
+        color: white;
+        padding: 20px;
+        text-decoration: none;
+        display: block;
+    }
+
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+

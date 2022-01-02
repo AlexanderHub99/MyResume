@@ -48,8 +48,15 @@ body {
     align-items: center;
 }
 
-
-
+.wrapper_My_projects {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    background: #92a4a2;
+    flex-direction: column;
+    align-items: center;
+}
 /*.particles-js {
     width: 100%;
     margin: 0 auto;
@@ -202,11 +209,18 @@ body {
     margin: 7px;
 }
 
-.My_Resume_text h1 {
+.My_Resume_text tr {
+    font-size: 21px;
+}
+.text_td {
+    font-size: 21px;
+}
+tbody {
+    font-size: 21px;
 }
 
 .author__image {
-   width: 100%
+    width: 100%
 }
 
 @media (max-width: 450px) {
