@@ -13,23 +13,23 @@ namespace MyResume.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class APIToDoListsController : ControllerBase
+    public class APIController : ControllerBase
     {
         private readonly WebToDoListContext _context;
 
-        public APIToDoListsController(WebToDoListContext context)
+        public APIController(WebToDoListContext context)
         {
             _context = context;
         }
 
-        // GET: api/APIToDoLists
+        // GET: /api/API
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ToDoList>>> GetToDoList()
         {
             return await _context.ToDoList.ToListAsync();
         }
 
-        // GET: api/APIToDoLists/5
+        // GET: /api/API/5
         [HttpGet("{id}")]
         public async Task<ActionResult<ToDoList>> GetToDoList(int id)
         {
@@ -43,8 +43,7 @@ namespace MyResume.Controllers
             return toDoList;
         }
 
-        // PUT: api/APIToDoLists/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        // PUT: /api/API/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutToDoList(int id, ToDoList toDoList)
         {
@@ -74,7 +73,7 @@ namespace MyResume.Controllers
             return NoContent();
         }
 
-        // POST: api/APIToDoLists
+        // POST: /api/API
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<ToDoList>> PostToDoList(ToDoList toDoList)
@@ -85,10 +84,10 @@ namespace MyResume.Controllers
            // return CreatedAtAction("GetToDoList", new { id = toDoList.id }, toDoList);
             return CreatedAtAction(nameof(GetToDoList), new { id = toDoList.id }, toDoList);
         }
-       
 
 
-        // DELETE: api/APIToDoLists/5
+
+        // DELETE: /api/API/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteToDoList(int id)
         {
