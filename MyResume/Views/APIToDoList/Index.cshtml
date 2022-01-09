@@ -6,7 +6,25 @@
     ViewBag.Title = "Index";
 }
 
+
 <body>
+    <h3>Add</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+            <label>Выполнено не выполнено:</label>
+            <input type="checkbox" id="edit-isComplete">
+            <label>Task</label>
+            <input type="text" id="edit-name">
+            <label>На какую дату:</label>
+            <input type="date" id="edit-date">
+            <label>Приоритет:</label>
+            <input type="radio" id="edit-priority" name="contact" value="Высокий">
+            <label for="edit-priority">Высокий</label>
+            <input type="radio" id="edit-priority"name="contact" value="Средний">
+            <label for="edit-priority">Средний</label>
+            <input type="radio" id="edit-priority"name="contact" value="Низкий">
+            <label for="edit-priority">Низкий</label>
+             <input type="submit" value="Add">
+    </form>
     <div class="body">
         <div id="body">
             <table class="table" id="table_ToDoList">
@@ -14,7 +32,7 @@
                     <tr>
                         <th scope="col">Номер:</th>
                         <th scope="col">Выполнено не выполнено: </th>
-                        <th scope="col">На какую дату:</th> 
+                        <th scope="col">На какую дату:</th>
                         <th scope="col">Приоритет:</th>
                         <th scope="col">Задача:</th>
                     </tr>
@@ -24,6 +42,7 @@
     </div>
 </body>
 <script src="~/js/APIToDoList.js"></script>
+<script src ="~/js/ApiAddTaskToDoLoist.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 

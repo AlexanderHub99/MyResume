@@ -81,7 +81,7 @@ namespace MyResume.Controllers
             _context.ToDoList.Add(toDoList);
             await _context.SaveChangesAsync();
 
-           // return CreatedAtAction("GetToDoList", new { id = toDoList.id }, toDoList);
+           
             return CreatedAtAction(nameof(GetToDoList), new { id = toDoList.id }, toDoList);
         }
 

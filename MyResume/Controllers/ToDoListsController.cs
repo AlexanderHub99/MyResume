@@ -88,6 +88,7 @@ namespace MyResume.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("id,Task,dateOfCompletion,priority")] ToDoList toDoList)
         {
+            
             if (ModelState.IsValid)
             {
                 _context.Add(toDoList);

@@ -8,16 +8,24 @@ using MyResume.Models;
 
 namespace MyResume.Data
 {
-    
-    
-        public class WebToDoListContext : DbContext
-        {
-            public WebToDoListContext(DbContextOptions<WebToDoListContext> options)
-                : base(options)
-            {
-            }
 
-            public DbSet<MyResume.Models.ToDoList> ToDoList { get; set; }
+
+    public class WebToDoListContext : DbContext
+    {
+        public WebToDoListContext(DbContextOptions<WebToDoListContext> options)
+            : base(options)
+        {
+            
         }
-    
+
+        public DbSet<MyResume.Models.ToDoList> ToDoList { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ToDoList>().ToTable("ToDoList");
+
+        }
+    }
+
+
 }
