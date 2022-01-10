@@ -1,5 +1,4 @@
-﻿const { data } = require("jquery");
-
+﻿
 var apiInfo = document.getElementById("body");
 var uri = "https://localhost:44325/api/API";
 
