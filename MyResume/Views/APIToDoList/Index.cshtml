@@ -6,24 +6,35 @@
     ViewBag.Title = "Index";
 }
 
-
+<!DOCTYPE html>
 <body>
     <h3>Add</h3>
-    <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
-            <label>Выполнено не выполнено:</label>
-            <input type="checkbox" id="edit-isComplete">
-            <label>Task</label>
-            <input type="text" id="edit-name">
-            <label>На какую дату:</label>
-            <input type="date" id="edit-date">
-            <label>Приоритет:</label>
-            <input type="radio" id="edit-priority" name="contact" value="Высокий">
-            <label for="edit-priority">Высокий</label>
-            <input type="radio" id="edit-priority"name="contact" value="Средний">
-            <label for="edit-priority">Средний</label>
-            <input type="radio" id="edit-priority"name="contact" value="Низкий">
-            <label for="edit-priority">Низкий</label>
-             <input type="submit" value="Add">
+    <form action="javascript:void(0);" method="POST" onsubmit="addItem()" class="formAddTask">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Task:</span>
+            </div>
+            <input type="text" class="form-control" id="edit-name" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">На какую дату:</span>
+            </div>
+            <input type="date" class="form-control" id="edit-date" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Приоритет:</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01">
+                <option selected>Приоритет...</option>
+                <option id="edit-priority" value="Высокий">Высокий</option>
+                <option id="edit-priority" value="Средний">Средний</option>
+                <option id="edit-priority" value="Низкий">Низкий</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" value="Add">Записать</button>
+        
     </form>
     <div class="body">
         <div id="body">
@@ -42,7 +53,8 @@
     </div>
 </body>
 <script src="~/js/APIToDoList.js"></script>
-<script src ="~/js/ApiAddTaskToDoLoist.js"></script>
+<script src="~/js/ApiAddTaskToDoLoist.js"></script>
+<link rel="stylesheet" href="~/css/ToDoListAPI.css" />
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 

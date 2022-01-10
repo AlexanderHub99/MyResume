@@ -1,4 +1,5 @@
-﻿
+﻿const { data } = require("jquery");
+
 var apiInfo = document.getElementById("body");
 var uri = "https://localhost:44325/api/API";
 
@@ -23,7 +24,7 @@ async function getResponse() {
                 <td>${task}</td>
                 <td>
                 <a class="btn btn-outline-success" id="apiEdit" href="/api/API/${id}">Edit</a> |
-                <a class="btn btn-outline-info" id="apiDetails" href="/api/API/${id}">Details</a> |
+                <a class="btn btn-outline-info" id="apiDetails" onclick="Details_TodoLosiApi(${id});">Details</a> |
                 <a class="btn btn-outline-danger" id="apiDelete"  onclick="Delite_TodoLosiApi(${id});">Delete</a>
                 </td>
              </tr>`
@@ -38,8 +39,8 @@ async function addItem() {
     const addNameDate = document.getElementById('edit-date');
     const addNamePriority = document.getElementById('edit-priority');
 
-     const item = {
-        completedNotCompleted: true,
+    const item = {
+        completedNotCompleted: false,
         dateOfCompletion: addNameDate.value.trim(),
         priority: addNamePriority.value.trim(),
         task: addNameTextbox.value.trim()
@@ -54,7 +55,7 @@ async function addItem() {
         },
         body: JSON.stringify(item)
     })
-    
+
     await getResponse();
 }
 
@@ -64,14 +65,39 @@ var buttonaDelete = window.document.getElementById('apiDelete');
 
 
 
-async function Delite_TodoLosiApi(id){
+async function Delite_TodoLosiApi(id) {
     await fetch(`${uri}/${id}`, {
         method: 'DELETE'
     });
-    
+
     await getResponse();
 };
 
 
 
+async function Details_TodoLosiApi(item) {
+    let response = await fetch("https://localhost:44325/api/API" + "/" + item)
+    let content = await response.json()
+    console.log(content)
+    let list = await document.getElementById("table_ToDoList")
+    list.innerHTML = "";
 
+
+    
+    list.innerHTML +=
+        `
+               <div class="alert alert-success" role="alert">
+               <h4 class="alert-heading">Задача!</h4>
+               <p>${content.task}</p>
+               <hr>
+               <p class="mb-0"><h5>Приоритет</h5>${content.priority}</p>
+               <hr>
+               <p class="mb-0"><h5>Запланировано на</h5> ${content.dateOfCompletion}</p>
+               <hr>
+               <p class="mb-0"><h5>Статус выполнения</h5> ${content.completedNotCompleted}</p>
+               |<a class="btn btn-outline-danger" id="apiDelete"  onclick="Delite_TodoLosiApi(${content.id});">Delete</a>|
+               <a class="btn btn-outline-success" id="apiEdit"  onclick="getResponse();">Back</a> |
+               </div>`
+
+    
+}
