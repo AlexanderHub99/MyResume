@@ -24,8 +24,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="priority" class="control-label"></label>
-                <input asp-for="priority" class="form-control" />
-                <span asp-validation-for="priority" class="text-danger"></span>
+                <select asp-for="priority" asp-validation-for="priority" class="form-control" id="inputGroupSelect01" asp-for="CompletedNotCompleted">
+                <option selected>Приоритет...</option>
+                <option asp-validation-for="priority" value="Высокий">Высокий</option>
+                <option asp-validation-for="priority" value="Средний">Средний</option>
+                <option asp-validation-for="priority" value="Низкий">Низкий</option>
+            </select>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
